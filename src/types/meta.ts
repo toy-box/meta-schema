@@ -42,3 +42,19 @@ export interface IFieldMeta {
   defaultValue?: any
   parentKey?: string
 }
+
+
+export enum BusinessFieldType {
+  INTEGER = 'integer',
+  NUMBER = 'number',
+  STRING = 'string',
+  TEXT = 'text',
+  DATE = 'date',
+  DATETIME = 'datetime',
+  BOOLEAN = 'boolean',
+  ARRAY = 'array',
+  OBJECT_ID = 'objectId',
+  SINGLE_OPTION = 'singleOption',
+  PERCENT = 'percent',
+  OBJECT = 'object',
+}
