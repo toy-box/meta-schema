@@ -10,12 +10,12 @@ export type LogicOpType = '$and' | '$or' | '$not' | '$nor'
 
 export interface ICompareOperation {
   source: string
-  op: UniteCompareOP | UniteCompareOpType
+  op: UniteCompareOP
   target?: number | string | number[] | string[] | Date | Date[]
 }
 
 export interface ILogicFilter {
-  logic: LogicOP | LogicOpType
+  logic: LogicOP
   compares: Partial<ICompareOperation>[]
 }
 
