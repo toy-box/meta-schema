@@ -1,1 +1,1 @@
-export * from './global'
+export * as MetaSchema from './types'
