@@ -6,16 +6,24 @@ export enum LogicOP {
   NOR = '$nor',
 }
 
+export type LogicOpType = '$and' | '$or' | '$not' | '$nor'
+
 export interface ICompareOperation {
   source: string
-  op: UniteCompareOP
+  op: UniteCompareOP | UniteCompareOpType
   target?: number | string | number[] | string[] | Date | Date[]
 }
 
 export interface ILogicFilter {
-  logic: LogicOP
+  logic: LogicOP | LogicOpType
   compares: Partial<ICompareOperation>[]
 }
+
+export type CompareOpType = '$eq' | '$gt' | '$gte' | '$in' | '$lt' | '$lte' | '$ne' | '$ne' | '$nin'
+
+export type DateCompareOpType = '$unitDateRange' | '$between'
+
+export type UniteCompareOpType = CompareOpType | DateCompareOpType
 
 export enum CompareOP {
   EQ = '$eq',
